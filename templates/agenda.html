@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+</head>
+<body>
+    <h2>Agendamentos</h2>
+
+    <ul>
+        <!-- chaves e porcento para usar comandos python no html-->
+        {% for evento in eventos %}
+            <!-- função python para retornar - imprimir objetos com chaves duplas - eventos 
+            data_evento é o objeto
+            get_data a função-->
+            <li>{{ evento.titutlo }} - {{ evento.get_data_evento}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
